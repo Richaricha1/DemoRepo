@@ -1,3 +1,5 @@
+package qa.test;
+
 //import java.sql.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -13,9 +15,10 @@ class hello {
     	
 		System.setProperty("webdriver.chrome.driver","//Users//Aditya.Kumar1//Downloads//chromedriver");
 		
+//		for headless execution
 		ChromeOptions chromepOtions = new ChromeOptions();
 		//hello
-//		ChromeOptions chromeOptions = null;
+
 		chromepOtions.setHeadless(true);
 		
 		WebDriver driver = new ChromeDriver(chromepOtions);

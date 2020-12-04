@@ -1,4 +1,4 @@
-package com.qa.pages;
+package qa.pages;
 
 public class HomePage {
 	public void homePage() {
