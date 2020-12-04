@@ -19,10 +19,22 @@ public class LocatorsTest {
 //		using xpath
 		
 //		         //tagname[attribute = 'value']/abc/xyz
-		driver.findElement(By.xpath("//input[@name = 'txtUsername']")).sendKeys("Admin");
+		/*driver.findElement(By.xpath("//input[@name = 'txtUsername']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@name = 'txtPassword']")).sendKeys("admin123");
 		
-		driver.findElement(By.xpath("//input[@class = 'button']")).click();
+		driver.findElement(By.xpath("//input[@class = 'button']")).click();*/
+		
+//		by css selector
+		
+		driver.findElement(By.cssSelector("input#txtUsername")).sendKeys("Admin");
+		driver.findElement(By.cssSelector("input#txtPassword")).sendKeys("admin123");
+		
+//		driver.findElement(By.cssSelector("input#btnLogin")).click();
+		
+//		to use class locator, in place of # . is used
+		driver.findElement(By.cssSelector("input.button")).click();
+		
+		driver.close();
 	}
 
 }
