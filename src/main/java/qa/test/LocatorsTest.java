@@ -19,7 +19,10 @@ public class LocatorsTest {
 //		using xpath
 		
 //		         //tagname[attribute = 'value']/abc/xyz
-		//driver.findElement(By.)
+		driver.findElement(By.xpath("//input[@name = 'txtUsername']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@name = 'txtPassword']")).sendKeys("admin123");
+		
+		driver.findElement(By.xpath("//input[@class = 'button']")).click();
 	}
 
 }
