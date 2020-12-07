@@ -21,8 +21,12 @@ public class AbstractionDemo {
 		
 		AbstractionDemo abstractionDemo = new AbstractionDemo();
 		abstractionDemo.login();
-		abstractionDemo.logout();
+//		abstractionDemo.logout();
 		//abstractionDemo.clickLinkByHref("welcome");
+		abstractionDemo.goToAdmin();
+		abstractionDemo.selectUserRole();
+		abstractionDemo.clickOnSearchButton();
+		
 		
 		
 
@@ -50,9 +54,28 @@ public class AbstractionDemo {
 		
 
 		WebDriverWait wait=new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[1]/div[1]/div[10]/ul/li[2]/a"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[1]/div[1]/div[10]/ul/li[2]/a"))).click();	
+		
+	}
+	
+	public void goToAdmin() {
+		driver.findElement(By.id("menu_admin_viewAdminModule")).click();
+			
+	}
+	
+	public void selectUserRole() {
+		
+//		handling drop down
+		Select dropdown = new Select(driver.findElement(By.id("searchSystemUser_userType")));
+		dropdown.selectByVisibleText("ESS");
 		
 		
+	}
+	
+	public void clickOnSearchButton() {
+		
+		driver.findElement(By.id("searchBtn")).click();
+		System.out.println("search button clicked");
 		
 	}
 	
