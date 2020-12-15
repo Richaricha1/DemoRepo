@@ -19,11 +19,12 @@ class hello {
 		ChromeOptions chromepOtions = new ChromeOptions();
 		//hello
 
-		chromepOtions.setHeadless(true);
+		//chromepOtions.setHeadless(true);
 		
 		WebDriver driver = new ChromeDriver(chromepOtions);
 	
-        driver.get("https://opensource-demo.orangehrmlive.com/");
+        //driver.get("https://opensource-demo.orangehrmlive.com/");
+        driver.get("http://localhost/ecommerce/index.php");
         
         driver.manage().window().maximize();
         
